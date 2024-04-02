@@ -1,17 +1,20 @@
 import React from 'react';
 
 const App: React.FC = () => (
-    <div>
-        <h1>Test</h1>
-        <button
-            type="button"
-            onClick={() => {
-                window.location.href = "itms-services://?action=download-manifest&url=./app/bdvapp.plist";
-            }}
-        >
-            Download V296 TDC v2
-        </button>
-    </div>
+  <div>
+    <h1>Test</h1>
+    <a
+      href="./app/bdvapp.plist"
+      download="BDVApp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <button
+      >
+        Download V296 TDC v2
+      </button>
+    </a>
+  </div>
 );
 
 export default App;
