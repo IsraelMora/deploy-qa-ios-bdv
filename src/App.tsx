@@ -1,21 +1,17 @@
+import React from 'react';
 
-function App() {
-
-  let dowload = ()=>{window.location.href = "itms-services://?action=download-manifest&url=./app/bdvapp.plist";};
-
-  return 
-  (
+const App: React.FC = () => (
     <div>
         <h1>Test</h1>
         <button
             type="button"
-            onClick={dowload}
+            onClick={() => {
+                window.location.href = "itms-services://?action=download-manifest&url=./app/bdvapp.plist";
+            }}
         >
             Download V296 TDC v2
         </button>
     </div>
-  );
-  
-}
+);
 
-export default App
+export default App;
